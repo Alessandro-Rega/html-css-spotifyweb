@@ -87,6 +87,44 @@ header .btn{
     cursor: pointer;
 }
 
+
+/* main > canzoni */
+
+main{
+    width: calc(100% - 50px);
+    height: calc(100vh - 190px);
+    float: left;
+    border: 1px solid red;
+    background-color: green;
+}
+
+/* selezione categorie */
+.selezione{
+    color: #7d7f84;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.selezione span{
+    display: inline-block;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+.selected{position: relative;}
+.selected::after{
+    content: " ";
+    width: 30px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 2px solid #adff2f;
+}
+
+
 /* footer > player */
 
 footer{
