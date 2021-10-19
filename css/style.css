@@ -6,6 +6,7 @@
 }
 
 body{
+    font-family: 'Roboto', sans-serif;
     background-color: #141922;
 }
 
@@ -21,6 +22,7 @@ aside{
     width: 50px;
     height: 100vh;
     position: relative;
+    float: left;
     background-color: #000000;
 }
 
@@ -60,4 +62,27 @@ aside > div img{
     padding: 1px 3px;
     border-radius: 50%;
     background-color: #808080;
+}
+
+
+/* header > bottone upgrade */
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #080b12;
+}
+
+header .btn{
+    padding: 10px 40px;
+    margin-right: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
