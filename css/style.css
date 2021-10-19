@@ -1,5 +1,63 @@
+/* generali */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: #141922;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* aside > menu laterale */
+aside{
+    width: 50px;
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+aside > div img{
+    width: 70%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#logo{
+    display: flex;
+    justify-content: center; 
+}
+
+.menu-alto{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    filter: brightness(.8);
+}
+
+.menu-basso{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-basso img:nth-child(1){
+    width: 40%;
+}
+
+.menu-basso img:nth-child(2){
+    padding: 1px 3px;
+    border-radius: 50%;
+    background-color: #808080;
 }
