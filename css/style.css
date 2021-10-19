@@ -94,8 +94,9 @@ main{
     width: calc(100% - 50px);
     height: calc(100vh - 190px);
     float: left;
-    border: 1px solid red;
-    background-color: green;
+    overflow: scroll;
+    /* border: 1px solid red; */
+    /* background-color: green; */
 }
 
 /* selezione categorie */
@@ -123,6 +124,45 @@ main{
     transform: translateX(-50%);
     border-bottom: 2px solid #adff2f;
 }
+
+/* suonati recenti */
+.recenti{
+    padding: 0px 10px;
+}
+
+.titolo{
+    color: white;
+    margin: 10px 0px 20px;
+}
+
+.cont-album{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.album img{
+    height: 200px;
+    margin-right: 10px;
+}
+
+.titolo-album{
+    margin: 10px 0px;
+    max-width: 200px;
+    color: white;
+}
+
+.sottotitolo-album{
+    font-size: 15px;
+    font-weight: 600;
+    color: #787b7f;
+}
+
 
 
 /* footer > player */
