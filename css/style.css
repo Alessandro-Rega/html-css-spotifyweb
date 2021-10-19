@@ -20,7 +20,7 @@ body{
 /* aside > menu laterale */
 aside{
     width: 50px;
-    height: 100vh;
+    height: calc(100vh - 90px);
     position: relative;
     float: left;
     background-color: #000000;
@@ -85,4 +85,84 @@ header .btn{
     border-radius: 20px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+/* footer > player */
+
+footer{
+    width: 100%;
+    height: 90px;
+
+    /* flex */
+    display: flex;
+
+    /* ------------- */
+
+    float: left;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.brano{
+    width: 27.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+#icona-brano{
+    display: inline-block;
+}
+
+#icona-brano img{
+    height: 30px;
+    margin: 0px 7px;
+}
+
+.desc{
+    display: inline-block;
+}
+
+#playlist{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#nome-brano{
+    font-size: 11px;
+    color: gray;
+    font-weight: 600;
+}
+
+#nome-brano span{
+    display: block;
+}
+
+.cont-icone{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.cont-icone i{
+    display: block;
+    cursor: pointer;
+    color: gray;
+}
+
+
+.player{
+    background-color: red;
+    width: 45%;
+    height: 100%;
+}
+
+.controlli{
+    background-color: green;
+    width: 27.5%;
+    height: 100%;
 }
