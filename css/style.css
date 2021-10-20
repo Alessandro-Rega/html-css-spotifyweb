@@ -144,13 +144,25 @@ main{
 }
 
 /* suonati recenti */
-.recenti{
+.recenti,
+.pers,
+.popolari{
     padding: 0px 10px;
+}
+
+.popolari img{
+    border-radius: 50%;
 }
 
 .titolo{
     color: white;
     margin: 10px 0px 20px;
+}
+
+.titolo span{
+    color: #6e7176;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .cont-album{
@@ -167,6 +179,7 @@ main{
 .album img{
     height: 200px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .titolo-album{
