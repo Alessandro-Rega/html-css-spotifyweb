@@ -24,6 +24,13 @@ hr{
     display: none;
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
 /* aside > menu laterale */
 aside{
     width: 50px;
@@ -113,6 +120,7 @@ main{
     height: calc(100vh - 190px);
     float: left;
     overflow: scroll;
+    overflow-x: hidden;
     /* border: 1px solid red; */
     /* background-color: green; */
 }
@@ -132,7 +140,7 @@ main{
     cursor: pointer;
 }
 
-.selected{position: relative;}
+.selected{position: relative;color: white;}
 .selected::after{
     content: " ";
     width: 30px;
@@ -180,6 +188,11 @@ main{
     height: 200px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.overlay {
+    width: 200px;
+    height: 200px;
 }
 
 .titolo-album{
@@ -445,6 +458,7 @@ footer{
         display: inline-block;
         color: white;
         font-weight: 600;
+        cursor: pointer;
     }
 
     /* lista playlist */
@@ -484,6 +498,7 @@ footer{
 
     .lista-playlist ul li{
         margin: 12px 0px;
+        cursor: pointer;
     }
 
     /* main */
@@ -498,6 +513,11 @@ footer{
     }
 
     .album img {
+        height: 150px;
+    }
+
+    .overlay {
+        width: 150px;
         height: 150px;
     }
 
@@ -530,6 +550,11 @@ footer{
         height: 110px;
     }
 
+    .overlay {
+        width: 110px;
+        height: 110px;
+    }
+
     .titolo-album{
         width: 120px;
         font-size: 12px;
@@ -551,6 +576,11 @@ footer{
         height: 148px;
     }
 
+    .overlay {
+        width: 148px;
+        height: 148px;
+    }
+
     .titolo-album{
         width: 150px;
         font-size: 12px;
@@ -562,14 +592,7 @@ footer{
     }
 }
 
-
-
-
-
-
-
-
-
+/* MEDIA QUERY ALTEZZA */
 @media screen and (max-height: 350px){
     .menu-basso{
         display: none;
@@ -583,4 +606,80 @@ footer{
     aside{
         display: none;
     }
+}
+
+/* EFFETTI HOVER */
+
+/* hover album play */
+.album:hover{position: relative;}
+.overlay:hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7)
+}
+.overlay:hover::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f144";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+}
+
+/* hover bottone upgrade */
+.btn:hover{
+    transform: scale(1.1) translateX(-15px);
+}
+
+/* hover selezione categorie */
+.selezione span:hover{
+    color: white;
+}
+
+/* hover selezione menu aside*/
+.menu-alto span:hover,
+.menu-basso span:nth-of-type(1):hover{
+    color: white;
+}
+
+.crea-playlist i:hover{filter: brightness(1);}
+.crea-playlist span:hover{color: white;}
+ul li:hover{color: white;}
+
+/* hover footer brano */
+.desc #nome-brano:hover span{
+    color: white;
+    text-decoration: underline;
+}
+.cont-icone i:hover{color: white;}
+
+/* hover play button */
+.fa-play-circle:hover{transform: scale(1.1);}
+
+/* hover barra tempo e barra volume */
+.barra-time:hover .barra-time-passato:after{
+    content: " ";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -5px;
+    top: -6px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.volume:hover .barra-volume:after{
+    content: " ";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -5px;
+    top: -6px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
 }
