@@ -563,14 +563,11 @@ footer{
     }
 }
 
-@media screen and (max-height: 190px){
+@media screen and (max-height: 160px){
     footer{
         background-color: rgba(40, 40, 40, .7);
     }
-
-    .brano{
-        width: 220px;
-        margin-right: 22.55px;
-        background-color: #282828;
+    aside{
+        display: none;
     }
 }
